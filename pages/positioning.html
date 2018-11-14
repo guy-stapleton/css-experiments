@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <head>
+        <meta charset="UTF-8">
+        <title>Positioning</title>
+        <style>
+            .wrapper {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .container {
+                border: 1px solid #DDD;
+            }
+
+            .container p {
+                background-color: rgb(175, 253, 253);
+                border: 1px solid rgb(19, 136, 136);
+                padding: .5em;
+                margin: .5em 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Positioning experiments</h1>
+            <p>1) The default positioning value, static. That means each successive block level element will layer upon the next.</p>
+            <div class="container">
+                <h2>Tuesday, 13th November</h2>
+                <p>Today's NBA games are (Away Vs Home):</p>
+                <p>Charolette VS Cleveland</p>
+                <p>Houston VS Denver</p>
+                <p>Atlanta VS Golden State</p>
+            </div>
+            <hr>
+            <p>Position: Sticky</p>
+            <p>Elements with potition sticky initally act as position static. So they observe resularly document flow. However, once we start to scroll past them, then they behave as posititon: fixed elements They are fixed relative to it's parent element.</p>
+            <div class="container">
+                <h2>Saturday, 17th November</h2>
+                <p>Philidelphia VS Charlotte</p>
+                <p style="position: sticky; top: 100px;">Los Angelas Clippers VS Brooklyn</p>
+                <p>Atlanta VS Indiana</p>
+                <p>Los Angelas Lakers VS Orlando</p>
+                <p>Denver VS New Orleans</p>
+                <p>Utah VS Boston</p>
+                <p>Toronto VS Chicago</p>
+                <p>Sacremento VS Houston</p>
+                <p>Golden State VS Dallas</p>
+                <p>Oklahoma City VS Phoenix</p>
+            </div>
+            <hr>
+            <p>Position: Relative</p>
+            <p>This looks at where the normal element would normally appear in document flow. It then moves it to where based on psoitioing modifiers given (e.g. top, bottom, left; right). </p>
+            <p>Notice that item still retains the same size. It's just been pushed out from the left axis</p>
+            <div class="container">
+                <h2>Wednesday, 14th November</h2>
+                <p>Today's slate of NBA games are (Away Vs Home):</p>
+                <p>Philidelphia VS Orlando</p>
+                <p style="position: relative; left: 2em;">Cleveland VS Washington</p>
+                <p>Chicago VS Boston</p>
+                <p>Miami VS Brooklyn</p>
+                <p>Detroit VS Toronto</p>
+                <p>Memphis VS Milwaukee</p>
+                <p>New Orleans VS Minnesota</p>
+                <p>New York VS Oklahomma City</p>
+                <p>Utah VS Dallas</p>
+                <p>San Antonio VS Phoenix</p>
+                <p>Portland VS Los Aangelas Lakers</p>
+            </div>
+            <hr>
+            <p>Position: Fixed</p>
+            <p>This sets the position of the element relative to the viewport. It takes the element out of document flow.</p>
+            <div class="container">
+                <h2>Thursday, 15th November</h2>
+                <p>Today's slate of NBA games are (Away Vs Home):</p>
+                <p>Golden State VS Houston</p>
+                <p style="position: fixed; top: 1em;">Atlanta VS Denver -- Hey, look fixed positioning</p>
+                <p>San Antonio VS Los Angelas Clippers</p>
+            </div>
+            <hr>
+            <p>Position: Absolute</p>
+            <p>These are taken out of document flow and can then be psosition off of it's containing element. The conatining element needs to be set to position relative for this to work. Just because a block level element is inside another block level element, that doesn't create a formatting context for the element to observe.</p>
+            <div class="container" style="position: relative">
+                <h2>Friday, 16th November</h2>
+                <p>Toronto VS Boston</p>
+                <p>Miami VS Indiana</p>
+                <p>Utah VS Philidelphia</p>
+                <p style="position: absolute; top: 2em; left: 350px;">Brooklyn VS Washington</p>
+                <p>Sacremento VS Memphsis</p>
+                <p>Portland VS Timberwolves</p>
+                <p>New York VS New Orleans</p>
+                <p>Chicago VS Milwaukee</p>
+            </div>
+            <hr>
+        </div>
+
+    </body>
+</html>
