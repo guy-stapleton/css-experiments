@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<title>CSS Experiments - Flexbox</title>
+<link type="stylesheet" href="...">
+<style>
+
+    .body {
+        background-color: #FDF;
+    }
+
+    .wrapper {
+        width: 80%;
+        background-color: #EEE;
+        margin: 10px auto;
+    }
+
+    .container {
+        border: 1px solid #FAA;
+    }
+    .updates {
+        display: flex;
+        /* flex-wrap: wrap; */
+    }
+
+    .updates p {
+        width: 300px;
+        padding: 1em;
+        border: 1px solid #0FF;
+        margin: 10px;
+        /* flex: 1 1 auto;  */
+    }
+
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Flexbox</h1>
+        <div class="container">
+            <h2>Injury Report: Golden State Warriors</h2>
+            <div class="updates">
+                <p>Steph Curry suffered a groin/abductor strain against the Milwaukee Bucks. He is expected to miss 2-4 weeks.</p>
+                <p>Draymond Green will play tonight. He was suspended by the Golden State Warriors for one game for conduct detrimental to the team.</p>
+                <p>Shaun Livingston will play tonight. He has been listed as day to day on the injury report.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>Injury Report: Houston Rockets</h2>
+            <div class="updates">
+                <p>Eric Gordon is currently out with a high left ankle sprain. He will be revaluated in 2 weeks.</p>
+                <p>James Harden will return tonight. He has missed the previous 5 games with right hamstring strain.</p>
+                <p>Chris Paul is out with an injured ankle. The injury occurred in Wednesday's game against the Nuggets. Paul finished the game</p>
+                <p>James Innes is also returning tonight he has missed the previous 12 contests following a back injury.</p>
+                <p>Carmelo Anthony will miss his sixth consecutive game tonight. The team has advised he is out with an illness.</p>
+            </div>
+        </div>
+    </div>
+<script>
+</script>
+</body>
+</html>
