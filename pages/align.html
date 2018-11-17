@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<title>Align</title>
+<link type="stylesheet" href="...">
+<style>
+    .body {
+        background-color: #FDF;
+    }
+
+    .wrapper {
+        width: 80%;
+        background-color: #EEE;
+        margin: 10px auto;
+    }
+
+    .container {
+        border: 1px solid #FAA;
+    }
+
+    .align-expr-1 {
+        display: flex;
+        height: 50vh;
+        align-items: center;
+    }
+    .items {
+        background-color: #D9F;
+        padding: 0.5em 1em;
+        margin: 1em; 
+    }
+
+    .items:nth-child(2) {
+        align-self: flex-end;
+    }
+
+    .items:nth-child(3) {
+        align-self: stretch;
+    }
+
+    .results-grid-areas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        /* grid-template-areas:
+        "a a b"
+        "c c b"
+        "d e e"; */
+         grid-template-areas:
+        "a a b"
+        ". c b"
+        "d e e";
+    }
+
+    .grid-align {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-template-areas:
+        "a a a b"
+        "a a a b"
+        "c c d d";
+        justify-items: end;
+    }
+
+    .item1 {
+        grid-area: a;
+        justify-self: center;
+    }
+    .item2 {
+        grid-area: b;
+        align-self: end;
+    }
+
+    .item3 {
+        grid-area: c;
+    }
+
+    .item4 {
+        grid-area: d;
+    }
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="align-expr-1">
+                <p class="items">item1</p>
+                <p class="items">item2</p>
+                <p class="items">item3</p>
+                <p class="items">item4</p>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h1>Resulsts: 15th November</h1>
+            <div class="results-grid-areas">
+                <p class="area1">Golden State: 88 VS Houston: 94. James Harden records 54 points; Warriors drop back to back
+                    games for the
+                    first time this season</p>
+                <p class="area2">Atalanta: 74 VS Denver 114. Jokic records a triple double (24pts, 11reb, 10 assists);
+                    Atlanta set a season
+                    low for points scored</p>
+                <p class="area3">LA Clippers: 105 VS San Antonio: 93. Harrell records a double double (23pts, 13 redb).
+                    Aldridge and DeRozan
+                    combine for 65 points.</p>
+                <p class="area4">Golden State: 88 VS Houston: 94. James Harden records 54 points; Warriors drop back to back
+                    games for the
+                    first time
+                    this season</p>
+                <p class="area5">Atalanta: 74 VS Denver 114. Jokic records a triple double (24pts, 11reb, 10 assists);
+                    Atlanta set a season
+                    low for
+                    points scored</p>
+        
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h1>Results: 16th November, 2018</h1>
+            <div class="grid-align">
+                <p class="item1">Boston V Toronto: 118 - 103</p>
+                <p class="item2">Washington V Brooklyn: 124 - 112</p>
+                <p class="item3">New Orleans V New York: 130 - 104</p>
+                <p class="item4">Milwaukee V Chicago: 139 - 89</p>
+            </div>
+        </div>
+    </div>
+<script>
+</script>
+</body>
+</html>
