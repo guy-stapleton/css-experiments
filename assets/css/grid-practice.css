@@ -1,0 +1,41 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+.row {
+    height: 100px;
+    display: flex;
+}
+
+.content {
+    width: 33%;
+    display: inline-block;
+    border-left: 10px double #FFF; 
+    border-bottom: 10px double #FFF; 
+    border-radius: 0 0 0 10px;
+}
+
+.area-1 {
+    background: rgba(0,0,0,0) linear-gradient(to right, rgb(145, 0, 0) 10%, rgba(253, 2, 2, 0.8) 100%) repeat scroll 0% 0%;
+}
+
+.area-2 {
+    background: rgba(0,0,0,0) linear-gradient(to right, rgb(0, 116, 131) 10%, rgba(2, 247, 255, 0.8) 100%) repeat scroll 0% 0%;
+}
+
+.area-3 {
+    background: rgba(0,0,0,0) linear-gradient(to right, rgb(143, 1, 143) 10%, rgba(247, 2, 255, 0.9) 100%) repeat scroll 0% 0%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .content {
+        display: block;
+        width: 100%;
+    }
+}

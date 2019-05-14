@@ -1,0 +1,41 @@
+header, footer {
+    height: 100px;
+    background: #F0F;
+}
+
+.clear-fix {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+aside {
+    height: 300px;
+    width: 250px;
+    margin-left: 50px;
+    background: rgb(144, 213, 235);
+    float: right;
+}
+
+section {
+    height: 300px;
+    width: 400px;
+    float: left;
+    margin-left: 50px;
+    background: rgb(77, 216, 50);
+}
+
+.mv-it {
+    position: relative;
+    font-family: "Cooperplate", "Baskerville bold italic", sans-serif;
+    transition: all 5s;
+}
+
+.mv-it:hover {
+    transform: translateX(20px);
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+    font-kerning: 1em;
+    text-shadow: rgb(42, 112, 27) 10px 10px;
+}
